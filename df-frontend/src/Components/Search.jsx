@@ -17,7 +17,7 @@ function Search() {
 
     async function fetchAll() {
         const res = await axios.get(`${import.meta.env.VITE_BURL}/all/college`)
-        console.log(res)
+        
         setColleges(res.data.colleges)
     }
 
