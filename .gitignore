@@ -1,0 +1,6 @@
+df-backend/node_modules/
+df-frontend/node_modules/
+
+# Environment files
+df-backend/.env
+df-frontend/.env

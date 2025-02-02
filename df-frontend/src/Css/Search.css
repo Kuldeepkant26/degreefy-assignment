@@ -1,0 +1,207 @@
+/* Search Component CSS */
+.Search {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Search .top {
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.Search .top .serach-bar {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1.5rem;
+}
+
+.Search .top .serach-bar input {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.Search .top .serach-bar button {
+    background-color: rgb(194, 120, 18);
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #F7A116;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e0910d;
+}
+
+/* Toggle Checkbox Styling */
+.filter-toggles {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.slider::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.toggle input:checked+.slider {
+    background-color: #F7A116;
+    /* Use the accent color */
+}
+
+.toggle input:checked+.slider::before {
+    transform: translateX(20px);
+}
+
+.label-text {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+
+.Search .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgb(194, 120, 18);
+    overflow-y: scroll;
+    height: 400px;
+}
+.Search .bottom::-webkit-scrollbar {
+   width: 0px;
+}
+
+/* CollegeCard CSS */
+.college-card {
+    width: 280px;
+    /* Slightly reduced width */
+    height: 320px;
+    /* Reduced height */
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.college-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.college-location {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.college-details,
+.college-duration-fee {
+    font-size: 0.875rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #F7A116;
+    /* Use the accent color */
+}
+
+.view-details-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #F7A116;
+    /* Use the accent color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #e0910d;
+    /* Darker shade for hover */
+}
