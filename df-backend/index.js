@@ -7,11 +7,12 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 const College = require('./models/college');
 
-const corsOptions = {
-    origin: '*',  
-};
 
-app.use(cors(corsOptions)); 
+
+app.use(cors({
+    origin: '*',
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
