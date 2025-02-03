@@ -7,11 +7,16 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 const College = require('./models/college');
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); 
+const corsOptions = {
+    origin: '*',  // Allow all origins (use specific domains in production)
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+};
 
-          
+app.use(cors(corsOptions)); app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 
 // Database connection
 async function dbConnection() {
@@ -42,7 +47,7 @@ app.get('/all/college', async (req, res) => {
 
 app.post('/search/college', async (req, res) => {
     const userPrompt = req.body.userPrompt;
- 
+
 
     try {
         let colleges = await College.find();
