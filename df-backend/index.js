@@ -8,9 +8,7 @@ const app = express();
 const College = require('./models/college');
 
 const corsOptions = {
-    origin: '*',  // Allow all origins (use specific domains in production)
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type,Authorization'
+    origin: '*',  
 };
 
 app.use(cors(corsOptions)); app.use(express.json());
